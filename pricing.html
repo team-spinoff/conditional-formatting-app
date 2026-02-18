@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing — Conditional Formatting for monday.com</title>
-  <meta name="description" content="Pricing plans for Conditional Formatting on monday.com. Free to start.">
+  <meta name="description" content="Pricing plans for Conditional Formatting on monday.com. Free to start, from $1.50/seat/month.">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -58,7 +58,10 @@
       letter-spacing: 0.5px;
     }
     .plan h2 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
-    .plan .price { font-size: 16px; color: #676879; margin-bottom: 20px; }
+    .plan .price { font-size: 16px; color: #676879; margin-bottom: 4px; }
+    .plan .price-detail { font-size: 32px; font-weight: 800; color: #323338; margin-bottom: 4px; }
+    .plan .price-detail span { font-size: 15px; font-weight: 400; color: #676879; }
+    .plan .price-note { font-size: 13px; color: #999; margin-bottom: 20px; }
     .plan .divider { height: 1px; background: #E8E8E8; margin-bottom: 20px; }
     .plan ul { list-style: none; flex: 1; }
     .plan ul li {
@@ -121,7 +124,8 @@
 
       <div class="plan">
         <h2>Free</h2>
-        <p class="price">$0 forever</p>
+        <div class="price-detail">$0</div>
+        <p class="price-note">Free forever</p>
         <div class="divider"></div>
         <ul>
           <li><span class="check">&#10003;</span> Up to 3 formatting rules</li>
@@ -140,7 +144,8 @@
       <div class="plan featured">
         <span class="badge">Most Popular</span>
         <h2>Starter</h2>
-        <p class="price">Billed through monday.com</p>
+        <div class="price-detail">$1.50 <span>/ seat / month</span></div>
+        <p class="price-note">$1.23/seat/mo billed yearly (save 18%)</p>
         <div class="divider"></div>
         <ul>
           <li><span class="check">&#10003;</span> Unlimited formatting rules</li>
@@ -150,7 +155,7 @@
           <li><span class="check">&#10003;</span> 25+ preset colors</li>
           <li><span class="check">&#10003;</span> All operators</li>
           <li><span class="check">&#10003;</span> Row highlighting</li>
-          <li><span class="check">&#10003;</span> Priority support</li>
+          <li><span class="check">&#10003;</span> Custom hex colors</li>
           <li><span class="dash">&#8212;</span> Cross-column rules</li>
         </ul>
         <a href="https://monday.com/marketplace" class="cta cta-primary">Get Starter</a>
@@ -158,12 +163,12 @@
 
       <div class="plan">
         <h2>Pro</h2>
-        <p class="price">Billed through monday.com</p>
+        <div class="price-detail">$2.50 <span>/ seat / month</span></div>
+        <p class="price-note">$2.05/seat/mo billed yearly (save 18%)</p>
         <div class="divider"></div>
         <ul>
           <li><span class="check">&#10003;</span> Everything in Starter</li>
           <li><span class="check">&#10003;</span> Cross-column rules</li>
-          <li><span class="check">&#10003;</span> Custom hex colors</li>
           <li><span class="check">&#10003;</span> Full customization</li>
           <li><span class="check">&#10003;</span> Priority support</li>
         </ul>
@@ -172,7 +177,7 @@
 
     </div>
 
-    <p class="note">All paid plans are billed through monday.com's platform. Pricing is per seat, per month.</p>
+    <p class="note">All paid plans are billed through monday.com's platform. Pricing is per seat, per month. Yearly billing saves 18%.</p>
 
     <div class="faq">
       <h2>Frequently asked questions</h2>
@@ -180,6 +185,11 @@
       <div class="faq-item">
         <h3>How does billing work?</h3>
         <p>All subscriptions are managed through monday.com's built-in billing system. You subscribe and manage your plan directly from the monday.com platform — no separate account needed.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What does "per seat" mean?</h3>
+        <p>Pricing is based on the number of seats in your monday.com account. All users on your account get access — no per-user activation needed.</p>
       </div>
 
       <div class="faq-item">
