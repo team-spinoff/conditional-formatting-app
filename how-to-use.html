@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Use — Conditional Formatting for monday.com</title>
+  <meta name="description" content="Getting started guide for Conditional Formatting on monday.com">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #323338;
+      line-height: 1.7;
+      background: #FFFFFF;
+    }
+    .header {
+      background: linear-gradient(135deg, #D4623A 0%, #B04E28 100%);
+      color: #FFFFFF;
+      padding: 48px 24px;
+      text-align: center;
+    }
+    .header h1 { font-size: 36px; font-weight: 700; }
+    .header p { font-size: 16px; opacity: 0.85; margin-top: 8px; }
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 48px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #F0F0F0;
+    }
+    h2:first-of-type { margin-top: 0; }
+    h3 { font-size: 20px; font-weight: 700; margin: 28px 0 8px; }
+    p { font-size: 16px; color: #4A4A4A; margin-bottom: 16px; }
+    ol, ul { margin: 0 0 16px 24px; }
+    ol li, ul li { font-size: 16px; color: #4A4A4A; margin-bottom: 10px; }
+    code {
+      background: #F5F6F8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #C85A31;
+    }
+    .step {
+      background: #F7F8FA;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .step-number {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background: #C85A31;
+      color: #FFFFFF;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      font-weight: 700;
+      font-size: 16px;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+    .step h3 { display: inline; vertical-align: middle; margin: 0; }
+    .step p { margin-top: 12px; }
+    .tip {
+      background: #FFF8F0;
+      border-left: 4px solid #C85A31;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+    }
+    .tip strong { color: #C85A31; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 1px solid #E8E8E8;
+      font-size: 15px;
+    }
+    th { font-weight: 700; background: #F7F8FA; }
+    .footer {
+      background: #F7F8FA;
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 14px;
+      color: #676879;
+    }
+    .footer a { color: #C85A31; text-decoration: none; margin: 0 12px; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>How to Use</h1>
+    <p>Set up your first formatting rule in under 30 seconds</p>
+  </div>
+
+  <div class="content">
+
+    <h2>Quick Start</h2>
+
+    <div class="step">
+      <span class="step-number">1</span>
+      <h3>Add the Board View</h3>
+      <p>Open any board in monday.com. Click the <strong>+</strong> button next to your existing views (Main Table, Kanban, etc.) and select <strong>Conditional Formatting</strong> from the list of available views.</p>
+    </div>
+
+    <div class="step">
+      <span class="step-number">2</span>
+      <h3>Create a Rule</h3>
+      <p>Click the <strong>"Add Rule"</strong> button in the toolbar. A side panel opens where you can configure your formatting rule:</p>
+      <ol>
+        <li><strong>Column:</strong> Select which column to evaluate (e.g., Status, Priority, Budget)</li>
+        <li><strong>Operator:</strong> Choose a comparison (equals, greater than, contains, between, overdue, etc.)</li>
+        <li><strong>Value:</strong> Enter or select the value to match against</li>
+        <li><strong>Color:</strong> Pick from 25+ preset colors or enter a custom hex code</li>
+        <li><strong>Mode:</strong> Choose "Cell Color" or "Row Highlight"</li>
+      </ol>
+      <p>Click <strong>Save Rule</strong> and your board updates instantly.</p>
+    </div>
+
+    <div class="step">
+      <span class="step-number">3</span>
+      <h3>Fine-Tune</h3>
+      <p>Add more rules, drag to reorder priority, and use column shading to visually group your data. Rules are evaluated top to bottom — the first matching rule wins.</p>
+    </div>
+
+    <div class="tip">
+      <strong>Tip:</strong> Place your most specific rules at the top and general/fallback rules at the bottom.
+    </div>
+
+    <h2>Features</h2>
+
+    <h3>Cell Coloring</h3>
+    <p>Colors the background of individual cells that match your condition. Great for status indicators, number thresholds, and date-based alerts.</p>
+
+    <h3>Row Highlighting</h3>
+    <p>Highlights the entire row when the condition matches. Use this to make critical or overdue items stand out across all columns. Available on Starter plan and above.</p>
+
+    <h3>Column Shading</h3>
+    <p>Apply a background color to an entire column for visual grouping. Click the column shade icon in the column header to pick a color. Free plan: up to 5 shaded columns.</p>
+
+    <h3>Cross-Column Rules</h3>
+    <p>Set a condition on one column but apply the color to a different column. For example: "When Status = Stuck, color the Owner column red." Available on Pro plan.</p>
+
+    <h2>Supported Column Types</h2>
+
+    <table>
+      <tr><th>Column Type</th><th>Example Operators</th></tr>
+      <tr><td>Status</td><td>equals, not equals</td></tr>
+      <tr><td>Numbers</td><td>equals, greater than, less than, between</td></tr>
+      <tr><td>Date</td><td>equals, before, after, overdue, within N days</td></tr>
+      <tr><td>Text</td><td>equals, contains, starts with, is empty</td></tr>
+      <tr><td>Dropdown</td><td>equals, not equals, contains</td></tr>
+      <tr><td>Rating</td><td>equals, greater than, less than</td></tr>
+      <tr><td>Checkbox</td><td>is checked, is not checked</td></tr>
+      <tr><td>Priority</td><td>equals, not equals</td></tr>
+      <tr><td>Label</td><td>equals, not equals</td></tr>
+      <tr><td>Timeline</td><td>overdue, within range</td></tr>
+      <tr><td>People</td><td>includes, is empty</td></tr>
+      <tr><td>Formula</td><td>equals, greater than, less than</td></tr>
+      <tr><td>Country</td><td>equals, not equals</td></tr>
+      <tr><td>Email</td><td>is empty, is not empty</td></tr>
+      <tr><td>Link / URL</td><td>is empty, is not empty</td></tr>
+    </table>
+
+    <h2>Plan Comparison</h2>
+
+    <table>
+      <tr><th>Feature</th><th>Free</th><th>Starter</th><th>Pro</th></tr>
+      <tr><td>Formatting rules</td><td>3</td><td>Unlimited</td><td>Unlimited</td></tr>
+      <tr><td>Cell coloring</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Row highlighting</td><td>-</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Column shades</td><td>5</td><td>Unlimited</td><td>Unlimited</td></tr>
+      <tr><td>Cross-column rules</td><td>-</td><td>-</td><td>Yes</td></tr>
+      <tr><td>Custom hex colors</td><td>-</td><td>-</td><td>Yes</td></tr>
+    </table>
+
+    <h2>FAQ</h2>
+
+    <h3>Do other users see my formatting rules?</h3>
+    <p>Formatting rules are stored per-view. Anyone who opens the same Conditional Formatting view on the board will see the same rules and colors.</p>
+
+    <h3>Does the app modify my board data?</h3>
+    <p>No. The app only reads your board data to evaluate rules. It never writes, modifies, or deletes any items, columns, or values. Colors are applied visually in the view only.</p>
+
+    <h3>What happens when I uninstall the app?</h3>
+    <p>All stored formatting rules are removed. Your board data is never affected.</p>
+
+    <h3>Can I use it on multiple boards?</h3>
+    <p>Yes. Add the Conditional Formatting view to as many boards as you like. Each board has its own set of rules.</p>
+
+    <h3>Does it work with subitems?</h3>
+    <p>Subitem support is planned for a future update.</p>
+
+  </div>
+
+  <div class="footer">
+    <a href="./">Home</a>
+    <a href="./privacy-policy">Privacy Policy</a>
+    <a href="./terms-of-service">Terms of Service</a>
+  </div>
+
+</body>
+</html>

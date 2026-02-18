@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditional Formatting for monday.com</title>
+  <meta name="description" content="Color cells and rows by rules — like Excel conditional formatting for monday.com">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #323338;
+      line-height: 1.6;
+      background: #FFFFFF;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #D4623A 0%, #B04E28 100%);
+      color: #FFFFFF;
+      padding: 80px 24px 60px;
+      text-align: center;
+    }
+    .header h1 { font-size: 48px; font-weight: 700; letter-spacing: -1px; margin-bottom: 16px; }
+    .header p { font-size: 20px; opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
+    .header .cta {
+      display: inline-block;
+      background: #FFFFFF;
+      color: #C85A31;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 14px 36px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+    .header .cta:hover { transform: translateY(-2px); }
+
+    /* Section */
+    .section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+    .section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+    }
+    .section p { font-size: 17px; color: #676879; margin-bottom: 16px; }
+
+    /* Features grid */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 32px;
+    }
+    .feature {
+      background: #F7F8FA;
+      border-radius: 12px;
+      padding: 32px 24px;
+    }
+    .feature .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    .feature h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .feature p { font-size: 15px; color: #676879; margin: 0; }
+
+    /* Pricing */
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .plan {
+      border: 1px solid #E8E8E8;
+      border-radius: 12px;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .plan.featured {
+      border-color: #C85A31;
+      box-shadow: 0 0 0 1px #C85A31;
+    }
+    .plan h3 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+    .plan .price { font-size: 14px; color: #676879; margin-bottom: 16px; }
+    .plan ul { list-style: none; text-align: left; }
+    .plan ul li { font-size: 15px; padding: 6px 0; color: #323338; }
+    .plan ul li::before { content: "\2713  "; color: #00C875; font-weight: bold; }
+
+    /* Footer */
+    .footer {
+      background: #F7F8FA;
+      padding: 40px 24px;
+      text-align: center;
+      color: #676879;
+      font-size: 14px;
+    }
+    .footer a { color: #C85A31; text-decoration: none; }
+    .footer nav { margin-bottom: 16px; }
+    .footer nav a { margin: 0 12px; }
+
+    /* Colors for feature icons */
+    .bg-green { background: #D4F5D4; }
+    .bg-orange { background: #FFF3E0; }
+    .bg-red { background: #FFE5E5; }
+    .bg-blue { background: #E3F2FD; }
+    .bg-purple { background: #F3E5F5; }
+    .bg-teal { background: #E0F7FA; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Conditional Formatting</h1>
+    <p>Color cells and rows by rules — like Excel conditional formatting, built for monday.com.</p>
+    <a href="https://monday.com/marketplace" class="cta">Install from Marketplace</a>
+  </div>
+
+  <div class="section">
+    <h2>What it does</h2>
+    <p>Create rules that automatically color cells, highlight rows, and shade columns based on your board data. Supports 15+ column types with smart operators like equals, greater than, between, contains, overdue, and more.</p>
+
+    <div class="features">
+      <div class="feature">
+        <div class="icon bg-green">&#127912;</div>
+        <h3>Cell Coloring</h3>
+        <p>Color individual cells based on their value. See status, priority, and numbers at a glance.</p>
+      </div>
+      <div class="feature">
+        <div class="icon bg-orange">&#9776;</div>
+        <h3>Row Highlighting</h3>
+        <p>Highlight entire rows when conditions match. Instantly spot overdue tasks and critical items.</p>
+      </div>
+      <div class="feature">
+        <div class="icon bg-blue">&#9638;</div>
+        <h3>Column Shading</h3>
+        <p>Shade entire columns with background colors for instant visual grouping across your board.</p>
+      </div>
+      <div class="feature">
+        <div class="icon bg-purple">&#8644;</div>
+        <h3>Cross-Column Rules</h3>
+        <p>Set a condition on one column, format a different column. Maximum flexibility for complex boards.</p>
+      </div>
+      <div class="feature">
+        <div class="icon bg-red">&#8597;</div>
+        <h3>Drag to Reorder</h3>
+        <p>Drag-to-reorder rule priority so the most important formatting rules always win.</p>
+      </div>
+      <div class="feature">
+        <div class="icon bg-teal">&#9889;</div>
+        <h3>Fast on Large Boards</h3>
+        <p>Virtualized rendering handles boards with 1,000+ items smoothly. No lag, no limits.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="background: #FAFBFC; max-width: 100%; padding-left: calc((100% - 960px) / 2 + 24px); padding-right: calc((100% - 960px) / 2 + 24px);">
+    <h2>Pricing</h2>
+    <p>Free to start. Upgrade when you need more power.</p>
+
+    <div class="pricing">
+      <div class="plan">
+        <h3>Free</h3>
+        <p class="price">$0 / forever</p>
+        <ul>
+          <li>Up to 3 formatting rules</li>
+          <li>Cell coloring</li>
+          <li>5 column shades</li>
+          <li>15+ column types</li>
+          <li>25+ preset colors</li>
+        </ul>
+      </div>
+      <div class="plan featured">
+        <h3>Starter</h3>
+        <p class="price">via monday.com billing</p>
+        <ul>
+          <li>Unlimited formatting rules</li>
+          <li>Row highlighting</li>
+          <li>Unlimited column shades</li>
+          <li>All operators</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>Pro</h3>
+        <p class="price">via monday.com billing</p>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Cross-column rules</li>
+          <li>Custom hex colors</li>
+          <li>Full customization</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Get started in 30 seconds</h2>
+    <p>1. Add Conditional Formatting as a Board View on any board.</p>
+    <p>2. Click "Add Rule" and pick a column, operator, and value.</p>
+    <p>3. Choose a color and save. Your board lights up instantly.</p>
+    <p style="margin-top: 24px;">No code, no formulas, no learning curve.</p>
+  </div>
+
+  <div class="footer">
+    <nav>
+      <a href="./privacy-policy">Privacy Policy</a>
+      <a href="./terms-of-service">Terms of Service</a>
+      <a href="./how-to-use">How to Use</a>
+    </nav>
+    <p>&copy; 2026 Conditional Formatting for monday.com. All rights reserved.</p>
+  </div>
+
+</body>
+</html>
